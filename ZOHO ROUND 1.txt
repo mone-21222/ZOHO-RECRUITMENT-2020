@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+char str[20];
+scanf("%s",str);
+int len=strlen(str);
+int i,j;
+for(i=1;i<=len;i++)
+{
+ int size;
+size=len/2+1;
+for(j=1;j<=len;j++)
+  {
+    if(j<=(len-i))
+      {
+       printf(" ");
+      }
+     else
+    {
+      if(size>len)
+      {
+       size=size%len;
+       }
+       printf("%c",str[size++]);
+    }
+}
+printf("\n");
+}
+}
